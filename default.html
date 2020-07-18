@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .sidenav > li:hover {
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper teal darker-1">
+                <a href="#!" class="brand-logo">SeeLink</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="analytics"><i class="material-icons left">analytics</i>Analytics</a></li>
+                    <li><a href="delete"><i class="material-icons left">delete_forever</i>Delete</a></li>
+                    <li><a href="newsletter"><i class="material-icons left">notes</i>Newsletter</a></li>
+                    <li><a href="delete"><i class="material-icons left">api</i>API</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="analytics"><i class="material-icons left">analytics</i>Analytics</a></li>
+            <li><a href="delete"><i class="material-icons left">delete_forever</i>Delete</a></li>
+            <li><a href="newsletter"><i class="material-icons left">notes</i>Newsletter</a></li>
+            <li><a href="delete"><i class="material-icons left">api</i>API</a></li>
+        </ul>
+        <form id="form" name="form" action="new" method="POST" class="container">
+            <h4 class="teal-text text-darken-1">The SeeLink! Fast, Easy, Secure</h4>
+            <div class="row">
+                <div class="input-field col s12 m4">
+                    <input id="seelink" type="text" name="seelink" class="validate">
+                    <label for="seelink">Choose Your custom Seelink</label>
+                    <span class="helper-text" data-error="This SeeLink isn't valid or not available." ></span>
+                </div>
+                <div class="input-field col s12 m4">
+                    <input id="to" type="url" name="to" class="validate">
+                    <label for="to">Where would you like this SeeLink to redirect to?</label>
+                    <span class="helper-text" data-error="This doesn't look much like a link. Remember to include http:// or https://" data-success=""></span>
+                </div>
+                <div class="input-field col s12 m4">
+                    <input id="PIN" type="number" name="PIN" class="validate" max="9999" min="1111" >
+                    <label for="PIN">PIN</label>
+                    <span class="helper-text" data-error="Please enter a 4 Digit numeric PIN" ></span>
+                </div>
+            </div>
+            <p>
+                <label>
+                    <input type="checkbox" id="agree" name="agree"/>
+                    <span>I agree to the </span>
+                </label>
+                <a href="ts" >Terms of servive</a>
+            </p>
+            <div class="row" >
+                <button class="teal darker-1 btn col s12 ">Create!!!</button>
+            </div>
+            <p>The PIN is used if you want to see how your SeeLink is doing on our <a href="analytics" class="teal-text text-darken-1">Analytics Page</a> or if you want to <a class="teal-text text-darken-1" href="delete">Delete</a> the SeeLink. Also if you want to use our <a class="teal-text text-darken-1" href="api" >API</a> to see your Stats you need this PIN. Please remember this PIN because there still is no way to reset it if you lose it. Support for resetting this PIN is coming soon. Sign up to our <a class="teal-text text-darken-1" href="newsLetter" >NewsLetter</a> to get notified for new events and changes. (No spam, I Promise)</p>
+            <div class="row" >
+                <a class="teal darker-1 btn col s12 m5" >
+                    Need a link to a WhatsApp chat?
+                </a>
+                <span class="col s2" ></span>
+                <a class="teal darker-1 btn col s12 m5" >
+                    Need a link to a Instagram Profile?
+                </a>
+            </div>
+        </form>
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+            });
+        </script>
+    </body>
+</html>
